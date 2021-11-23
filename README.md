@@ -1,3 +1,3 @@
 # eksamensopgave
-Eksamensopgave, efterår 2021
-Udarbejdet af S152415
+Eksamensopgave, efterår 2021, 
+udarbejdet af S152415
