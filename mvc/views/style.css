@@ -1,0 +1,24 @@
+body {
+    margin: 0 auto;
+    max-width: 1024px
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form {
+    font-size: 2rem;
+}

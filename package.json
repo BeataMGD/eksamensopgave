@@ -1,0 +1,18 @@
+{
+  "name": "exam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "author": "S152415",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
