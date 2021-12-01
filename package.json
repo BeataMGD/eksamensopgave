@@ -1,0 +1,30 @@
+{
+  "name": "exam",
+  "version": "1.0.0",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "",
+    "start": "nodemon server.js"
+  },
+  "author": "S152415",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-form-data": "^2.0.17",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BeataMGD/eksamensopgave.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BeataMGD/eksamensopgave/issues"
+  },
+  "homepage": "https://github.com/BeataMGD/eksamensopgave#readme",
+  "description": ""
+}

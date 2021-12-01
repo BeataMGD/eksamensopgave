@@ -1,0 +1,39 @@
+Brug Regitzes sidste kode
+-> følg samme struktur med public etc.
+
+--> flet den sammen med mvc-model, mere eller mindre 
+... argumenter for hvorfor / hvorfor ikke noget bliver brugt eller udladt
+
+
+
+Søg på simple javascript for web shop
+- brug dba's struktur og find hvad det er der er mest effektivt
+
+Se på gamle opgaver og brug samme struktur
+
+
+
+
+Noget der kunne gøre implementering af app bedre: 
+- man kan ikke opratte profil i samme navn flere gange
+- mulighed for kundeservice -> oprette et kontakt system mellem klient og 
+- mulighed for at rapportere et problem
+- gemme 
+- ønskelist ... 
+- guide til dba; hvordan man bruger, hvordan den fungerer etc.
+
+
+Brug af test på et stykke kun (grundigt - læs beskrivelse igen) :
+- debug
+- unittester
+
+
+
+
+Søg på hashmap, og cashing
+
+Kig også på uge47 ift. genveje og smart kode
+
+
+
+funktionalitet i frontend hvor vi poster data til vores backend og får dataen ind
