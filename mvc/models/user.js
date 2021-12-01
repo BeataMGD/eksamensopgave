@@ -1,27 +1,21 @@
 class User {
-    constructor(email, password) {
+
+    constructor(name, email, password, address, zipcode, city, country, phonenumber, birthdate) {
+      this.name = name;
       this.email = email;
       this.password = password;
+      this.country = country;
+      this.city = city;
+      this.address = address;
+      this.zipcode = zipcode;
+      this.phonenumber = phonenumber;
+      this.birthdate = birthdate;
     }
-  }
+}
+
 module.exports = User;
   
 
 
 // Class ? -> kig i kilder og skift til samme struktur som fra ØV
 // ^ omdan !!
-
-
-class userName {
-  constructor () {
-    this.ledger = {};
-  }
-  addToLedger(name) {
-    this.ledger[name] = 1
-    return name + "added to ledger"
-  }
-  checkledger(name) {
-    return (name in this.ledger)
-  }
-}
-nameSystem = new Name ();

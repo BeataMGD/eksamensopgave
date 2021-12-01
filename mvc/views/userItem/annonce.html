@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log ind på DBA 2.0</title>
+    <title>Opret annonce 2.0</title>
     <link rel="stylesheet" href="style.css">
-    <script src="login.js" async defer></script>
+    <script src="annonce.js" async defer></script>
 </head>
 <body>
     <h1>
@@ -15,23 +15,36 @@
         <span style="margin: 0 10px;">DBA 2.0</span>
     </h1>
     <h2>
-        Log ind på profil
+        Opret en annonce her
     </h2>
-    <form id="formLogin">
-        <label for="udfyld">Udfyld venligst nedenstående felter:</label>
-        <div>
-            <input placeholder="E-mail" type="email" id="email" required>
-        </div>
-        <div>
-            <input placeholder="Password" type="password" id="password" required>
-        </div>
-        <div>
-            <input type="submit" value="Submit" id="indsend">
-        </div>
+    <form id="submitForm">
+        Titel: <input type="input" name="title" id="title" required>
+        <br> Pris(DKK): <input type="number" name="price" id="price" required>
+        <br> Kategori: <select name="category" id="category">
+            <option value="select">-- Vælg kategori --</option>
+            <option value="Tøj">Tøj</option>
+            <option value="Sko">Sko</option>
+            <option value="Sport">Sport</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Skønhed">Skønhed</option>
+            <option value="Bøger">Bøger</option>
+            <option value="Elektronik">Elektronik</option>
+            <option value="Dekoration">Dekoration</option>
+            <option value="Møbler">Møbler</option>
+            <option value="Udendørs">Udendørs</option>
+        </select>
+        <br> Vælg fil: <input type="file" name="image" id="image">
+        <br> Opret annonce: <button type="submit">Opret annonce</button>
     </form>
-    <div> 
-        Forside: <a href="index.html"> <button>Home</button> </a>
-    </div>
+    Se tilføjede varer i tabel: <button id="refresh">Vare tabel</button>
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+    </style>
+    <table id="list">
+
+    </table>
     <footer>
         &copy; 2021, eksamensopgave udarbejdet af S152415
     </footer>

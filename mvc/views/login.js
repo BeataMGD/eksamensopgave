@@ -1,27 +1,35 @@
-const form = document.querySelector('form');
-
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-});
+const loginform = document.querySelector('#formLogin');
 
 
-const submitKnap = document.querySelector('#indsend');
-const forgetKnap = document.querySelector('#glem');
+    loginform.addEventListener('submit', async (e) => { // Funtion e for event
+        e.preventDefault();
 
-submitKnap.addEventListener('click', () => {
-    localStorage.setItem('email', emailInput.value);
-    nameDisplayCheck();
-    localStorage.setItem('password', passwordInput.value)
-});
-
-forgetKnap.addEventListener('click', () => {
-    localStorage.removeItem('email');
-    localStorage.removeItem('password');
-    nameDisplayCheck()
-});
-
-
-
-/*
-window.alert("Oplysninger forkert");
-*/
+        let email = document.getElementById('email').value;
+        let password = document.getElementById('password').value;
+        
+        const user = {
+            email: email,
+            password: password
+        }
+        
+        await fetch('http://localhost:3030/user/login',{
+            method: 'POST', // eller put - husk argumentation
+            headers: {
+                'Content-Type': 'application/json', 
+            },
+            body: JSON.stringify(user),
+        })
+        .then(res => res.json())
+        .then(res => {
+            if(res) {
+                localStorage.setItem("user", JSON.stringify(user));
+                window.location.href = '/surfe.html';
+                window.alert(`Velkommen tilbage ${email}`);
+            } else {
+                window.alert('Kan ikke logge ind');
+            }
+        })
+        .catch(err => {
+            window.alert('Noget gik galt', err);
+        });
+    });
