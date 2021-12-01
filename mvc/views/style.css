@@ -1,0 +1,95 @@
+body {
+    margin: 0 auto;
+    font-family: 'Courier New', sans-serif;
+    max-width: 1024px;
+    align-items: center;
+}
+
+h1 {
+    margin: 20px 0 10px 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    margin: 0;
+    padding: 10px;
+}
+
+#description {
+    margin: 0 0 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: beige;
+}
+
+#redirect {
+    margin: 20px 0 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 240px;
+    background-color: navajowhite;
+    justify-content: center;
+}
+
+table {
+    text-align: center;
+    max-width: 1024px;
+}
+
+#table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#comment {
+    margin: 20px 400px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid beige;
+    text-align: center;
+}
+
+td {
+    padding: 10px;
+}
+
+button {
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid blue;
+}
+
+input {
+    margin: 20px 0 0 0;
+}
+
+#indsend {
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+footer {
+    margin: 20px 0 20px 0;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+option {
+    text-align: center;
+}
+
+select, button {
+    margin: 20px 0;
+}
+
+
+
+th {
+    padding: 10px;
+}
