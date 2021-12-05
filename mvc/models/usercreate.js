@@ -1,3 +1,9 @@
+
+// User er til, at oprette en bruger og læse informationer om oprettet bruger
+// Class bruges for at definere informationer om den pågældende bruger
+// Informationerne er defineret ved at give constructor relevante parametre
+// Constructor giver 
+
 class User {
 
     constructor(name, email, password, address, zipcode, city, country, phonenumber, birthdate) {
@@ -15,7 +21,3 @@ class User {
 
 module.exports = User;
   
-
-
-// Class ? -> kig i kilder og skift til samme struktur som fra ØV
-// ^ omdan !!

@@ -1,3 +1,6 @@
+
+// Userlogin er til, at en allerede oprettet bruger kan logge ind ved at skrive email og password
+
 class Userlogin {
 
     constructor(email, password) {

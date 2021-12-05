@@ -1,14 +1,17 @@
 const userDelete = document.querySelector('#deleteuser');
+const userLogout = document.querySelector('#logoutuser');
 
-const user = localStorage.getItem("user");
+// Redirecter bruger hvis ikke logget ind...
+const user = localStorage.getItem("active");
 if (!user) {
-    location.href = '/login.html';
+    location.href = '/index.html';
 }
 
+// Sletter brugeren
 userDelete.addEventListener('click', (e) => {
     e.preventDefault();
 
-    const user = JSON.parse(localStorage.getItem("user"));
+    const user = JSON.parse(localStorage.getItem("active"));
 
     fetch('http://localhost:3030/user/delete', {
         method: 'DELETE',
@@ -20,12 +23,25 @@ userDelete.addEventListener('click', (e) => {
     .then(res => res.json())
     .then(res => {
         if (res) {
-            localStorage.removeItem("user");
-            location.href = '/signup.html';
-            window.alert('Bruger er slettet')
+            localStorage.removeItem("active");
+            window.location.href = '/index.html';
+            window.alert('Bruger er slettet');
         }
     })
     .catch(err => {
         window.alert('Noget gik galt', err);
     });
 });  
+
+
+// Logger ud
+userLogout.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+    if (user) {
+        window.localStorage.clear();
+        window.location.href = '/index.html';
+        window.alert('Bruger er logget ud');
+    };
+});
+

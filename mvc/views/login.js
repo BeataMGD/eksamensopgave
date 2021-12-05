@@ -1,6 +1,6 @@
 const loginform = document.querySelector('#formLogin');
 
-
+// Bruger log ind
     loginform.addEventListener('submit', async (e) => { // Funtion e for event
         e.preventDefault();
 
@@ -13,7 +13,7 @@ const loginform = document.querySelector('#formLogin');
         }
         
         await fetch('http://localhost:3030/user/login',{
-            method: 'POST', // eller put - husk argumentation
+            method: 'POST', 
             headers: {
                 'Content-Type': 'application/json', 
             },
@@ -22,9 +22,9 @@ const loginform = document.querySelector('#formLogin');
         .then(res => res.json())
         .then(res => {
             if(res) {
-                localStorage.setItem("user", JSON.stringify(user));
+                localStorage.setItem("active", JSON.stringify(user));
                 window.location.href = '/surfe.html';
-                window.alert(`Velkommen tilbage ${email}`);
+                window.alert(`Velkommen ${email}`);
             } else {
                 window.alert('Kan ikke logge ind');
             }

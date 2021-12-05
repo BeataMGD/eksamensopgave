@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opret profil - ProgFit</title>
+    <title>Opdater brugerprofil - ProgFit</title>
     <link rel="stylesheet" href="style.css">
-    <script src="signup.js" async defer></script>
+    <script src="update.js" async defer></script>
 </head>
 <body>
     <div>
@@ -16,27 +16,26 @@
             <span style="margin: 0 10px;">ProgFit</span>
         </h1>
         <h2>
-            Opret profil
+            Opdater din brugerprofil
         </h2>
     </div>
     <div>
-        <form id="formBruger">
-            <label for="udfyld">Udfyld venligst nedenstående felter:</label>
-                <br><input placeholder="Fulde navn" type="text" id="name" required/>
-                <br><input placeholder="E-mail" type="email" id="email" required/>
-                <br><input placeholder="Adgangskode" type="password" id="password" required/>
-                <br><input placeholder="Land" type="text" id="country"/>
-                <br><input placeholder="By" type="text" id="city"/>
-                <br><input placeholder="Adresse" type="text" id="address"/>
-                <br><input placeholder="Postnummer" type="number" id="zipcode"/>
-                <br><input placeholder="Telefonnummer" type="number" id="number"/>
-                <br><input placeholder="Fødselsdato" type="date" id="date"/>
-                <br> <input value="Opret bruger" type="submit" id="indsend">
+        <form id="formOpd">
+            <label for="udfyld">Udfyld venligst nedenstående felter for at opdatere bruger:</label>
+                <br>Ny: <input placeholder="Brugernavn" type="text" id="name" required/>
+                <br>Samme: <input placeholder="E-mail" type="email" id="email" required/>
+                <br>Ny: <input placeholder="Adgangskode" type="password" id="password" required/>
+                <br>Ny: <input placeholder="Land" type="text" id="country"/>
+                <br>Ny: <input placeholder="By" type="text" id="city"/>
+                <br>Ny: <input placeholder="Adresse" type="text" id="address"/>
+                <br>Ny: <input placeholder="Postnummer" type="number" id="zipcode"/>
+                <br>Ny: <input placeholder="Telefonnummer" type="number" id="number"/>
+                <br>Ny: <input placeholder="Fødselsdato" type="date" id="date"/>
+                <br><input value="submit" type="submit" id="indsend">
         </form>
     </div>
-    <div>
-        <p>
-        </p>
+    <div id="brugerInfo">
+
     </div>
     <footer>
         &copy; 2021, eksamensopgave udarbejdet af S152415

@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage - ProgFit</title>
+    <title>Opret annonce - ProgFit</title>
     <link rel="stylesheet" href="style.css">
+    <script src="itempost.js" async defer></script>
 </head>
 <body>
     <h1>
@@ -14,42 +15,37 @@
         <span style="margin: 0 10px;">ProgFit</span>
     </h1>
     <h2>
-        Velkommen til ProgFit
+        Opret en annonce
     </h2>
-    <div id="description">
-        Få en glimrende oplevelse med denne veludviklede hjemmeside 
-        <br> Progfit tilbyder dig muligheden for at skabe din egen shopping platform
-        <br> Del, sælg, køb - du styrer det helt selv
-        <br> Kom i gang ved at oprette en bruger eller logge ind - se valgmulighederne forneden:
-    </div>
-    <div id="comment">
-        God fornøjelse
-    </div>
-    <div id="table">
-        <style>
-            table, th, td {
-              border:1px solid black;
-            }
-        </style>
-        <table style="width:80%">
-            <tr>
-                <td>NUMMER</td>
-                <td>KRAV</td>
-                <td>KNAP</td>
-            </tr>
-            <tr>
-                <td>1.</td>
-                <td>App’en skal tillade en bruger at oprette en profil.</td>
-                <td> <a href="signup.html"> <button id="opret">Opret bruger</button> </a> </td>
-            </tr>
-            <tr>
-            <tr>
-                <td>4.</td>
-                <td>App’en skal tillade brugeren at logge ind.</td>
-                <td> <a href="login.html"> <button id="login">Log ind</button> </td>
-            </tr>
-        </table>
-    </div>
+    <form id="formPost">
+        <br> <div id="id"> </div>
+        Titel: <input type="input" name="title" id="title" required>
+        <br> Pris(DKK): <input type="number" name="price" id="price" required>
+        <br> Kategori: <select name="category" id="category">
+            <option value="select">-- Vælg kategori --</option>
+            <option value="Tøj">Tøj</option>
+            <option value="Sko">Sko</option>
+            <option value="Sport">Sport</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Skønhed">Skønhed</option>
+            <option value="Bøger">Bøger</option>
+            <option value="Elektronik">Elektronik</option>
+            <option value="Dekoration">Dekoration</option>
+            <option value="Møbler">Møbler</option>
+            <option value="Udendørs">Udendørs</option>
+        </select>
+        <br> Vælg fil: <input type="file" name="image" id="image" >
+        <br> Opret annonce: <button type="submit">Opret annonce</button>
+    </form>
+    Se tilføjede varer i tabel: <button id="tabel">Vare tabel</button>
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+    </style>
+    <table id="list">
+
+    </table>
     <footer>
         &copy; 2021, eksamensopgave udarbejdet af S152415
     </footer>

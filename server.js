@@ -1,11 +1,16 @@
-// Opret api med node.js og express.js
-
+// Opret api med node.js og express
 const express = require('express');
-const cors = require('cors');
+const cors = require('cors'); // Flere servere kan til tilgå dataen
+// Middleware
+const fs = require('fs'); // tilgår JSON data
+const bodyparser = require('body-parser'); // tilgår JSON data
+
+const formData = require('express-form-data');
 
 const app = express(); 
 
-app.use(express.json()); // Comes as a json string
+app.use(express.json()); // Kommer som json string
+app.use(bodyparser.json()) // Fjerner strings
 app.use(cors());
 
 
@@ -16,69 +21,15 @@ app.listen(PORT, () => {
 });
 
 
-const userController = require('./mvc/controllers/modelsControllers.js');
+// Routes
+const userController = require('./mvc/controllers/userControllers.js');
+const itemController = require('./mvc/controllers/itemControllers.js');
 
+// Endpoints
 app.use('/user', userController);
+app.use('/post', itemController);
 
+
+// Statisk mappe indeholdende html filer
 app.use(express.static('./mvc/views'));
-
-
-// Annonce
-
-const formData = require('express-form-data');
-
-app.use(express.static('./mvc/views/userItem'));
-
-app.use('/', express.static('userItem'));
-
-app.use(express.static('./db/uploads'));
-
-const options = {
-    uploadDir: './db/uploads'
-};
-
-const products = [];
-
-app.post('/itemtable', formData.parse(options), (req, res, next) => { // Kører middleware på endpoint: /item
-  let {title, price, category} = req.body;
-  let image = req.files.image.path.replace('\\','/');
-
-  products.push({title, price, category, image});
-  
-  res.send();
-});
-
-app.get('/items', (req, res) => {
-    res.json(products);
-});
-
-
-
-
-
-
-
-
-
-
-
-/*
-// Test for at se om api virker:
-// Vi kører localhost i postman
-app.use('/', function(req, res) {
-    res.send('Api works'); // I browser står der så: Api works
-});
-// Det virker, ja tak
-
-/*
-app.get('/table/', (req, res) => {
-    res.sendFile(__dirname + '/frontpage.html');
-});
-*/
-
-
-// !!! Skriv endpoints for neden 
-// Serveren er middleware for de forskellige js filer i mappen 
-// Brug: const 'navnet' = require ("./mappe/filnavn.js")
-// endpoints er: app.use('/endpointnavn',navnet);
-
+app.use(express.static('./storage/uploads'));

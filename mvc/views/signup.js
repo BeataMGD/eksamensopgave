@@ -34,10 +34,10 @@ const brugerform = document.querySelector('#formBruger');
             body: JSON.stringify(userDetails)
         })
         .then(res => res.json())
-        .then(res => { // 
+        .then(res => { 
             if (res) {
                 window.location.href='/login.html';
-                window.alert(`Velkommen ${email}, du er nu oprettet i vores system`)
+                window.alert(`${email} er oprettet i systemet`)
             } //
         })
         .catch(err => {

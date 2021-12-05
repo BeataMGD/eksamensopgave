@@ -1,22 +1,22 @@
-const fs = require("fs");
+const fs = require("fs");  // fs (file systems), arbejder lokalt på disken
 
 const ABSOLUTE_PATH = __dirname + "/";
-const USER_FILE = "./database.json";
+const USER_FILE = "../../storage/userDatabase.json"; // Henviser til .json fil med data om bruger
 
-class DB {
+class UsersFile {
   constructor() {
     this.users = this.openFile(USER_FILE);
   }
 
-  // Save file
+  // Gem fil
   saveFile(fileName, contentString) {
     fs.writeFileSync(ABSOLUTE_PATH + fileName, contentString);
   }
 
-  // Open file
+  // Åben fil
   openFile(fileName) {
     const file = fs.readFileSync(ABSOLUTE_PATH + fileName);
-    return JSON.parse(file);
+    return JSON.parse(file); // JSON parse læser json og konverterer til js objekt
   }
 
   // LOGIN DB
@@ -34,18 +34,9 @@ class DB {
     return this.users.find((x) => user.email == x.email)
   }
 
-  /*// POST DB
-  savePost(user) {
-    this.users.push(user);
-    this.saveFile(USER_FILE, JSON.stringify(this.users));
-  }
-
-  findPost(user) {
-    return this.users.find((x) => user.image == x.image);
-  }*/
 }
 
 
 
 // Det her er en singleton -- laaangt over pensum, men et ret fedt term at fyre af
-module.exports = new DB();
+module.exports = new UsersFile();
