@@ -1,35 +1,13 @@
 [
     {
-        "name": "Chris L. LÆLÆLÆ",
-        "email": "l@gmail.com",
-        "password": "2121",
+        "name": "ka",
+        "email": "ka@gmail.com",
+        "password": "21",
         "country": "Danmark",
         "city": "Frederiksberg",
         "address": "Paludan Vej",
         "zipcode": "2121",
         "phonenumber": "21212121",
-        "birthdate": "2021-12-04"
-    },
-    {
-        "name": "LOLO",
-        "email": "beata@gmail.com",
-        "password": "4040",
-        "country": "Danmark",
-        "city": "Frederiksberg",
-        "address": "Paludan Vej",
-        "zipcode": "1815",
-        "phonenumber": "29160307",
-        "birthdate": "2021-12-04"
-    },
-    {
-        "name": "LOLOLO",
-        "email": "rderwin@hotmail.com",
-        "password": "21212",
-        "country": "Finland",
-        "city": "Olu",
-        "address": "iii",
-        "zipcode": "2333",
-        "phonenumber": "023108967",
-        "birthdate": ""
+        "birthdate": "2021-11-30"
     }
 ]

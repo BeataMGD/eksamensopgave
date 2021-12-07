@@ -1,5 +1,3 @@
-const updateform = document.querySelector('#formUpdate');
-
 // Redirecter bruger hvis ikke logget ind...
 const user = localStorage.getItem("active");
 if (!user) {
@@ -8,6 +6,8 @@ if (!user) {
 
 
 // Opdaterer bruger informationer
+const updateform = document.querySelector('#formUpdate');
+
 updateform.addEventListener('submit', async (e) => { // Funtion e for event
     e.preventDefault();
 

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const fs = require('fs');
+const fs = require('fs'); // fs (file systems), arbejder lokalt på disken
 
 
 
@@ -46,6 +46,7 @@ router.put('/update', async (req, res) => {
 });
 
 
+// Slet vare
 router.delete('/delete/:id', async (req, res) => {
   let data = JSON.parse(fs.readFileSync('storage/itemDatabase.json'))
 
@@ -61,6 +62,13 @@ router.delete('/delete/:id', async (req, res) => {
   }
 });
 
+
+// Se varer for bestemt kategori
+router.get('/category/:category', async (req,res) => {
+  let data = JSON.parse(fs.readFileSync('storage/itemDatabase.json'));
+
+  res.send(data.filter(e => req.params.category === e.category));
+});
 
 
 

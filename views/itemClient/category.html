@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opret annonce - ProgFit</title>
+    <title>Kategori menu - ProgFit</title>
     <link rel="stylesheet" href="style.css">
-    <script src="delete.js" async defer></script>
+    <script src="category.js" async defer></script>
 </head>
 <body>
     <h1>
@@ -15,18 +15,35 @@
         <span style="margin: 0 10px;">ProgFit</span>
     </h1>
     <h2>
-        Slet vare
+        Se kategori <menu></menu>
     </h2>
-    <form id="formDelete">
-        Vare id: <input type="text" name="id" id="id">
-        <br> Slet vare: <button type="submit">Slet vare</button>
+    <form id="formCategory">
+        <br> Kategori: <select name="category" id="category">
+            <option value="select">-- Vælg kategori --</option>
+            <option value="Tøj" id="clothes">Tøj</option>
+            <option value="Sko" id="shoes">Sko</option>
+            <option value="Sport">Sport</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Skønhed">Skønhed</option>
+            <option value="Bøger">Bøger</option>
+            <option value="Elektronik">Elektronik</option>
+            <option value="Dekoration">Dekoration</option>
+            <option value="Møbler">Møbler</option>
+            <option value="Udendørs">Udendørs</option>
+        </select>
     </form>
-    Se tilføjede varer i tabel: <button id="tabel">Vare tabel</button>
+    Se solgte varer for en bestemt kategori: <button id="tabel">Vare kategori</button>
     <style>
         table, th, td {
           border:1px solid black;
         }
     </style>
+    <table id="list">
+
+    </table>
+    <div> 
+        <a href="surfe.html"> <button id="home">Hjem knap</button> </a>
+    </div>
     <footer>
         &copy; 2021, eksamensopgave udarbejdet af S152415
     </footer>

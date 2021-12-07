@@ -5,7 +5,6 @@ const cors = require('cors'); // Flere servere kan til tilgå dataen
 const fs = require('fs'); // tilgår JSON data
 const bodyparser = require('body-parser'); // tilgår JSON data
 
-const formData = require('express-form-data');
 
 const app = express(); 
 
@@ -22,8 +21,8 @@ app.listen(PORT, () => {
 
 
 // Routes
-const userController = require('./mvc/controllers/userControllers.js');
-const itemController = require('./mvc/controllers/itemControllers.js');
+const userController = require('./controllers/userControllers.js');
+const itemController = require('./controllers/itemControllers.js');
 
 // Endpoints
 app.use('/user', userController);
@@ -31,5 +30,7 @@ app.use('/post', itemController);
 
 
 // Statisk mappe indeholdende html filer
-app.use(express.static('./mvc/views'));
-app.use(express.static('./storage/uploads'));
+app.use(express.static('./views'));
+app.use(express.static('./views/userClient'));
+app.use(express.static('./views/itemClient'));
+app.use(express.static('./storage'));

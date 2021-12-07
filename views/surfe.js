@@ -1,13 +1,13 @@
-const userDelete = document.querySelector('#deleteuser');
-const userLogout = document.querySelector('#logoutuser');
-
 // Redirecter bruger hvis ikke logget ind...
 const user = localStorage.getItem("active");
 if (!user) {
     location.href = '/index.html';
 }
 
+
 // Sletter brugeren
+const userDelete = document.querySelector('#deleteuser');
+
 userDelete.addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -21,8 +21,8 @@ userDelete.addEventListener('click', (e) => {
         body: JSON.stringify(user),
     })
     .then(res => res.json())
-    .then(res => {
-        if (res) {
+    .then(data => {
+        if (data) {
             localStorage.removeItem("active");
             window.location.href = '/index.html';
             window.alert('Bruger er slettet');
@@ -34,7 +34,10 @@ userDelete.addEventListener('click', (e) => {
 });  
 
 
+
 // Logger ud
+const userLogout = document.querySelector('#logoutuser');
+
 userLogout.addEventListener('click', (e) => {
     e.preventDefault();
     

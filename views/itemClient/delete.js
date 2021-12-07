@@ -1,5 +1,3 @@
-const deleteform = document.querySelector('#formDelete');
-
 // Redirecter bruger hvis ikke logget ind...
 const user = localStorage.getItem("active");
 if (!user) {
@@ -8,6 +6,8 @@ if (!user) {
 
 
 // Slet bruger
+const deleteform = document.querySelector('#formDelete');
+
 deleteform.addEventListener('submit', async (e) => { // Funtion e for event
     e.preventDefault();
 

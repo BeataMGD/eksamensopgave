@@ -56,10 +56,14 @@ td {
     padding: 10px;
 }
 
-button {
+button, #submit {
     padding: 5px;
     border-radius: 10px;
     border: 2px solid blue;
+}
+
+#home {
+    border: 2px solid black;
 }
 
 input {

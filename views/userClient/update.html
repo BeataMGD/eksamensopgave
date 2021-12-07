@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opret profil - ProgFit</title>
+    <title>Opdater brugerprofil - ProgFit</title>
     <link rel="stylesheet" href="style.css">
-    <script src="signup.js" async defer></script>
+    <script src="update.js" async defer></script>
 </head>
 <body>
     <div>
@@ -16,27 +16,33 @@
             <span style="margin: 0 10px;">ProgFit</span>
         </h1>
         <h2>
-            Opret profil
+            Opdater din brugerprofil
         </h2>
     </div>
-    <div>
-        <form id="formBruger">
-            <label for="udfyld">Udfyld venligst nedenstående felter:</label>
-                <br><input placeholder="Fulde navn" type="text" id="name" required/>
-                <br><input placeholder="E-mail" type="email" id="email" required/>
-                <br><input placeholder="Adgangskode" type="password" id="password" required/>
-                <br><input placeholder="Land" type="text" id="country"/>
-                <br><input placeholder="By" type="text" id="city"/>
-                <br><input placeholder="Adresse" type="text" id="address"/>
-                <br><input placeholder="Postnummer" type="number" id="zipcode"/>
-                <br><input placeholder="Telefonnummer" type="number" id="number"/>
-                <br><input placeholder="Fødselsdato" type="date" id="date"/>
-                <br> <input value="Opret bruger" type="submit" id="indsend">
-        </form>
+    <div id="description">
+        Husk at skrive din nuværende e-mail ind, da den forbliver uændret.
+        <br>
+        <br> Venligst udfyld nedenstående felter for at opdatere bruger:
     </div>
     <div>
-        <p>
-        </p>
+        <form id="formOpd">
+                Skift:<input placeholder="Brugernavn" type="text" id="name" required/>
+                <br>Nuværende: <input placeholder="E-mail" type="email" id="email" required/>
+                <br>Skift: <input placeholder="Adgangskode" type="password" id="password" required/>
+                <br>Skift: <input placeholder="Land" type="text" id="country"/>
+                <br>Skift: <input placeholder="By" type="text" id="city"/>
+                <br>Skift: <input placeholder="Adresse" type="text" id="address"/>
+                <br>Skift: <input placeholder="Postnummer" type="number" id="zipcode"/>
+                <br>Skift: <input placeholder="Telefonnummer" type="number" id="number"/>
+                <br>Skift: <input placeholder="Fødselsdato" type="date" id="date"/>
+                <br><input value="Opdater" type="submit" id="submit">
+        </form>
+    </div>
+    <div id="brugerInfo">
+
+    </div>
+    <div> 
+        <a href="surfe.html"> <button id="home">Hjem knap</button> </a>
     </div>
     <footer>
         &copy; 2021, eksamensopgave udarbejdet af S152415

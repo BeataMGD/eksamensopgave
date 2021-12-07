@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Opret annonce - ProgFit</title>
     <link rel="stylesheet" href="style.css">
-    <script src="itempost.js" async defer></script>
+    <script src="itemupdate.js" async defer></script>
 </head>
 <body>
     <h1>
@@ -15,11 +15,11 @@
         <span style="margin: 0 10px;">ProgFit</span>
     </h1>
     <h2>
-        Opret en annonce
+        Opdater vare
     </h2>
-    <form id="formPost">
-        <br> <div id="id"> </div>
-        Titel: <input type="input" name="title" id="title" required>
+    <form id="formUpdate">
+        Vare id: <input type="text" name="id" id="id">
+        <br> Titel: <input type="input" name="title" id="title" required>
         <br> Pris(DKK): <input type="number" name="price" id="price" required>
         <br> Kategori: <select name="category" id="category">
             <option value="select">-- Vælg kategori --</option>
@@ -35,17 +35,12 @@
             <option value="Udendørs">Udendørs</option>
         </select>
         <br> Vælg fil: <input type="file" name="image" id="image" >
-        <br> Opret annonce: <button type="submit">Opret annonce</button>
+        <br> Opret annonce: <button type="submit">Opdater</button>
     </form>
-    Se tilføjede varer i tabel: <button id="tabel">Vare tabel</button>
-    <style>
-        table, th, td {
-          border:1px solid black;
-        }
-    </style>
-    <table id="list">
-
-    </table>
+    Se opdaterede varer i tabel: <a href="table.html"> <button id="tabel">Vare tabel</button> </a>
+    <div> 
+        <a href="surfe.html"> <button id="home">Hjem knap</button> </a>
+    </div>
     <footer>
         &copy; 2021, eksamensopgave udarbejdet af S152415
     </footer>
