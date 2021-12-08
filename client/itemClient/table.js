@@ -1,20 +1,24 @@
+// Redirecter bruger hvis ikke logget ind
+const user = localStorage.getItem("active"); // Localstorage finder key value for en aktiv bruger
+if (!user) { // Er brugeren ikke aktiv,
+    location.href = '/index.html'; // bliver vedkommende sendt til index.html for at logge ind eller oprette en profil
+}
 
-// Varer for en bestemt kategori
-const list = document.getElementById('list');
+
+// Få vare frem i tabel
 const tabel = document.getElementById('tabel');
+const list = document.getElementById('list');
     
 tabel.addEventListener('click', async (e) => {
     e.preventDefault();
 
-    let category = document.getElementById('category').value;
-
     await fetch(
-        'http://localhost:3030/post/category/' + category, {
-        method: 'GET'
+        'http://localhost:3030/post/items', {
+        method: 'GET' // Laver en get-metode for generere en tabel
     })
     .then(res => res.json())
     .then(data => { 
-        // genererer en tabel til list i html
+
         list.innerHTML = ` 
         <tr>
             <th> Id </th>
@@ -26,6 +30,7 @@ tabel.addEventListener('click', async (e) => {
         `;
 
         // For each e (element) fungerer som et for loop (kører igennem alle elementer) 
+        
         data.forEach((e) => { // tilføjer til list i html
             list.innerHTML += `
             <tr>
@@ -33,9 +38,9 @@ tabel.addEventListener('click', async (e) => {
                 <td>${e.title}</td>
                 <td>${e.price}</td>
                 <td>${e.category}</td>
-                <td> <img src="${e.image}" style="height:200px;width:200px"></td>
+                <td> <img src="${e.image.replace('storage/uploads/','')}" style="height:200px;width:200px"></td>
             </tr>
-            `;
+            `; // image's "path" hvor der står storage/uploads/ bliver "replaced" med ingenting, så billedet kan dukke op
         })
     })
     .catch(err => {

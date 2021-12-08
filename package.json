@@ -3,20 +3,23 @@
   "version": "1.0.0",
   "main": "server.js",
   "directories": {
-    "test": "tests"
+    "test": "mocha --exit tests"
   },
   "scripts": {
-    "test": "",
+    "test": "mocha",
     "start": "nodemon server.js"
   },
   "author": "S152415",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-form-data": "^2.0.17",
     "fs": "0.0.1-security",
+    "mocha": "^9.1.3",
     "nodemon": "^2.0.15"
   },
   "devDependencies": {},

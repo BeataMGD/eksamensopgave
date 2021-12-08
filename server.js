@@ -21,16 +21,20 @@ app.listen(PORT, () => {
 
 
 // Routes
-const userController = require('./controllers/userControllers.js');
-const itemController = require('./controllers/itemControllers.js');
+const userController = require('./server/userControllers.js');
+const itemController = require('./server/itemControllers.js');
 
 // Endpoints
 app.use('/user', userController);
 app.use('/post', itemController);
 
 
-// Statisk mappe indeholdende html filer
-app.use(express.static('./views'));
-app.use(express.static('./views/userClient'));
-app.use(express.static('./views/itemClient'));
-app.use(express.static('./storage'));
+// Statisk mappe som indeholder html filer
+app.use(express.static('./client'));
+app.use(express.static('./client/userClient'));
+app.use(express.static('./client/itemClient'));
+app.use(express.static('./storage/uploads'));
+
+
+
+module.exports = app;

@@ -1,23 +1,23 @@
 [
     {
-        "id": "idkwv3v1qr",
-        "title": "Kjole",
-        "price": "210",
-        "category": "Tøj",
-        "image": "C:\\fakepath\\zara.jpeg"
+        "id": "idkwxgkuki",
+        "title": "210000",
+        "price": "210000",
+        "category": "Mode",
+        "image": "storage/uploads/eJP94HmlFzc6r5DOxK_nio9b.png"
     },
     {
-        "id": "idkwv3vax9",
+        "id": "idkwxgman3",
         "title": "Kjole",
         "price": "560",
         "category": "Tøj",
-        "image": "C:\\fakepath\\zara.jpeg"
+        "image": "storage/uploads/GIgUz541aYLITxWIXhftkFPN.jpeg"
     },
     {
-        "id": "idkwvakgfb",
-        "title": "nynyny",
-        "price": "560",
-        "category": "Elektronik",
-        "image": "C:\\fakepath\\Skærmbillede 2021-12-02 kl. 21.13.54.png"
+        "id": "idkwxgntil",
+        "title": "Sko",
+        "price": "1299",
+        "category": "Sport",
+        "image": "storage/uploads/HpZ4OsnzzH5esOsqWSBII2D9.png"
     }
 ]

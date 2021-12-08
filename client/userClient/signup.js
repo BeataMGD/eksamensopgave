@@ -1,7 +1,6 @@
 
 // Opret bruger
 const brugerform = document.querySelector('#formBruger');
-
 brugerform.addEventListener('submit', async (e) => { // Funtion e for event
     e.preventDefault();
 
@@ -28,7 +27,7 @@ brugerform.addEventListener('submit', async (e) => { // Funtion e for event
     }
 
     await fetch('http://localhost:3030/user/create',{
-        method: 'POST', // eller put - husk argumentation
+        method: 'POST', 
         headers: {
             'Content-Type': 'application/json',
         },

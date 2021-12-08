@@ -1,7 +1,7 @@
-// Redirecter bruger hvis ikke logget ind...
-const user = localStorage.getItem("active");
-if (!user) {
-    location.href = '/index.html';
+// Redirecter bruger hvis ikke logget ind
+const user = localStorage.getItem("active"); // Localstorage finder key value for en aktiv bruger
+if (!user) { // Er brugeren ikke aktiv,
+    location.href = '/index.html'; // bliver vedkommende sendt til index.html for at logge ind eller oprette en profil
 }
 
 

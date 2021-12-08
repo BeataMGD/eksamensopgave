@@ -9,5 +9,16 @@
         "zipcode": "2121",
         "phonenumber": "21212121",
         "birthdate": "2021-11-30"
+    },
+    {
+        "name": "Chris L.",
+        "email": "l@gmail.com",
+        "password": "50",
+        "country": "Danmark",
+        "city": "Frederiksberg",
+        "address": "Paludan Vej",
+        "zipcode": "2121",
+        "phonenumber": "21212121",
+        "birthdate": "2021-12-01"
     }
 ]

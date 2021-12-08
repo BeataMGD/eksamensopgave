@@ -1,19 +1,21 @@
-// Redirecter bruger hvis ikke logget ind...
-const user = localStorage.getItem("active");
-if (!user) {
-    location.href = '/index.html';
+// Redirecter bruger hvis ikke logget ind
+const user = localStorage.getItem("active"); // Localstorage finder key value for en aktiv bruger
+if (!user) { // Er brugeren ikke aktiv,
+    location.href = '/index.html'; // bliver vedkommende sendt til index.html for at logge ind eller oprette en profil
 }
 
 
-// Få vare frem i tabel
-const tabel = document.getElementById('tabel');
+// Varer for en bestemt kategori
 const list = document.getElementById('list');
+const tabel = document.getElementById('tabel');
     
 tabel.addEventListener('click', async (e) => {
     e.preventDefault();
 
+    let category = document.getElementById('category').value;
+
     await fetch(
-        'http://localhost:3030/post/items', {
+        'http://localhost:3030/post/category/' + category, {
         method: 'GET'
     })
     .then(res => res.json())
