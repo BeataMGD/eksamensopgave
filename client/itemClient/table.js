@@ -6,8 +6,8 @@ if (!user) { // Er brugeren ikke aktiv,
 
 
 // Få vare frem i tabel
-const tabel = document.getElementById('tabel');
-const list = document.getElementById('list');
+const tabel = document.querySelector('#tabel');
+const list = document.querySelector('#list');
     
 tabel.addEventListener('click', async (e) => {
     e.preventDefault();

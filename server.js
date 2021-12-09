@@ -1,8 +1,8 @@
 // Opret api med node.js og express
 const express = require('express');
 const cors = require('cors'); // Flere servere kan til tilgå dataen
-// Middleware
-const fs = require('fs'); // tilgår JSON data
+
+const fs = require('fs'); // tilgår JSON data // middleware
 const bodyparser = require('body-parser'); // tilgår JSON data
 
 
@@ -21,20 +21,20 @@ app.listen(PORT, () => {
 
 
 // Routes
-const userController = require('./server/userControllers.js');
-const itemController = require('./server/itemControllers.js');
+const userController = require('./router/userControllers.js');
+const itemController = require('./router/itemControllers.js');
 
-// Endpoints
+// Endpoints - connect middleware
 app.use('/user', userController);
 app.use('/post', itemController);
 
 
-// Statisk mappe som indeholder html filer
+// Statisk mappe som indeholder html filer - middleware
 app.use(express.static('./client'));
 app.use(express.static('./client/userClient'));
 app.use(express.static('./client/itemClient'));
 app.use(express.static('./storage/uploads'));
 
 
-
+// nødvendigt for at test virker
 module.exports = app;

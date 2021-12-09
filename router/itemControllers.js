@@ -7,12 +7,12 @@ const fs = require('fs'); // fs (file systems), arbejder lokalt på disken
 const formData = require('express-form-data'); 
 
 const options = {
-  uploadDir: './storage/uploads' // mappe hvor billeder bliver gemt
+  uploadDir: 'storage/uploads' // mappe hvor billeder bliver gemt
 }
 
 
 // Opret en vare
-router.post('/item', formData.parse(options),async (req, res, next) => { 
+router.post('/item', formData.parse(options),async (req, res, next) => { // Kører kun middleware på endpoint '/item', da formData.parse(options) står på samme linje
   console.log(req.body)
 
   let data = JSON.parse(fs.readFileSync('storage/itemDatabase.json'));
@@ -21,11 +21,11 @@ router.post('/item', formData.parse(options),async (req, res, next) => {
   let image = req.files.image.path.replace('\\', '/');
 
   let id = 'id' + Date.now().toString(36); // Giver unikt id til vare for senere at kunne opdatere den specifikke vare
-  req.body.id = id
+  req.body.id = id;
 
   data.push({id, title, price, category, image});
 
-  fs.writeFile('storage/itemDatabase.json', JSON.stringify(data, null, 4), err => { // hele bodyen bliver stringify'et, null værdi, endetet med 4
+  fs.writeFile('storage/itemDatabase.json', JSON.stringify(data, null, 4), err => { // hele bodyen bliver stringify'et, null værdi, endetet med 4 (ser pænere ud i .json)
     if(err) res.send(err); // error som callback funktion
     res.status(200).send(data);
   });
@@ -43,7 +43,7 @@ router.get('/items', async (req,res) => {
 
 
 // Opdater vare
-router.put('/update', formData.parse(options), async (req, res) => {
+router.put('/update', formData.parse(options), async (req, res) => { // Kører kun middleware på endpoint '/update', da formData.parse(options) står på samme linje
   let data = JSON.parse(fs.readFileSync('storage/itemDatabase.json'));
 
   for (let i = 0; i < data.length; i++) {

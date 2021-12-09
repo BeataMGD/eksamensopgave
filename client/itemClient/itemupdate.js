@@ -5,7 +5,7 @@ if (!user) { // Er brugeren ikke aktiv,
 }
 
 
-// Opdaterer bruger informationer
+// Opdaterer vare informationer
 const updateform = document.querySelector('#formUpdate');
 
 updateform.addEventListener('submit', async (e) => { // Funtion e for event

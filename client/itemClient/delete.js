@@ -5,7 +5,7 @@ if (!user) { // Er brugeren ikke aktiv,
 }
 
 
-// Slet bruger
+// Slet vare
 const deleteform = document.querySelector('#formDelete');
 
 deleteform.addEventListener('submit', async (e) => { // Funtion e for event

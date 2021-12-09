@@ -1,23 +1,16 @@
 [
     {
-        "id": "idkwxgkuki",
-        "title": "210000",
-        "price": "210000",
-        "category": "Mode",
-        "image": "storage/uploads/eJP94HmlFzc6r5DOxK_nio9b.png"
+        "id": "idkwyqztzu",
+        "title": "Kode",
+        "price": "890",
+        "category": "Dekoration",
+        "image": "storage/uploads/1HUxoTRFmwulMR1kkEgkJrLO.png"
     },
     {
-        "id": "idkwxgman3",
-        "title": "Kjole",
-        "price": "560",
+        "id": "idkwz3dft5",
+        "title": "lol",
+        "price": "21",
         "category": "Tøj",
-        "image": "storage/uploads/GIgUz541aYLITxWIXhftkFPN.jpeg"
-    },
-    {
-        "id": "idkwxgntil",
-        "title": "Sko",
-        "price": "1299",
-        "category": "Sport",
-        "image": "storage/uploads/HpZ4OsnzzH5esOsqWSBII2D9.png"
+        "image": "storage/uploads/4HGLKrGdbbTuwlaebYtYr24X.png"
     }
 ]

@@ -6,8 +6,8 @@ if (!user) { // Er brugeren ikke aktiv,
 
 
 // Varer for en bestemt kategori
-const list = document.getElementById('list');
-const tabel = document.getElementById('tabel');
+const list = document.querySelector('#list');
+const tabel = document.querySelector('#tabel');
     
 tabel.addEventListener('click', async (e) => {
     e.preventDefault();
@@ -39,7 +39,7 @@ tabel.addEventListener('click', async (e) => {
                 <td>${e.title}</td>
                 <td>${e.price}</td>
                 <td>${e.category}</td>
-                <td> <img src="${e.image}" style="height:200px;width:200px"></td>
+                <td> <img src="${e.image.replace('storage/uploads/','')}" style="height:200px;width:200px"></td>
             </tr>
             `;
         })
